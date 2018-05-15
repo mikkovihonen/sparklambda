@@ -4,6 +4,9 @@
 
 Spark Lambda is a POC for an "API Gateway" for AWS lambda functions that could be useful in some cases where calling lambdas might be otherwise difficult.
 
+The POC is implemented as Sparkjava application that is built with Maven and produces a "fat" .jar file.
+
+
 ## Prerequisites
 
 For your environment you're going to need Java and Maven.
@@ -41,9 +44,9 @@ You can use for example the following policy as a directly attached inline polic
 }
 ```
 
-## Instructions
+Finally, you need some lambdas on your account!
 
-Spark Lambda is a Sparkjava application that is built with Maven and produces a "fat" .jar file.
+## Instructions
 
 Execute the following steps in your terminal to launch the application:
 
