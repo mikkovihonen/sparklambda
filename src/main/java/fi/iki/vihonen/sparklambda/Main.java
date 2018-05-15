@@ -1,3 +1,5 @@
+package fi.iki.vihonen.sparklambda;
+
 import static spark.Spark.*;
 
 import com.amazonaws.auth.AWSCredentials;
