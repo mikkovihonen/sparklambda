@@ -18,15 +18,18 @@ public class Main {
         Options options = new Options();
         options.addRequiredOption("k", "awsAccessKey", true, "AWS Access Key");
         options.addRequiredOption("s", "awsSecretKey", true, "AWS Secret Key");
+        options.addRequiredOption("r", "awsRegion", true, "AWS Region");
 
         String awsAccessKey = "";
         String awsSecretKey = "";
+        String awsRegion = "";
 
         CommandLineParser parser = new DefaultParser();
         try {
             CommandLine cmd = parser.parse(options, args);
             awsAccessKey = cmd.getOptionValue("k");
             awsSecretKey = cmd.getOptionValue("s");
+            awsRegion = cmd.getOptionValue("r");
         }
         catch (ParseException e) {
             System.out.println( "Unexpected exception:" + e.getMessage() );
@@ -37,7 +40,7 @@ public class Main {
         AWSCredentialsProvider awsCredentialsProvider = new AWSStaticCredentialsProvider(awsCredentials);
         AWSLambda lambdaClient = AWSLambdaClientBuilder.standard()
                 .withCredentials(awsCredentialsProvider)
-                .withRegion("us-east-1").build();
+                .withRegion(awsRegion).build();
 
         String response = "<ul>";
 
