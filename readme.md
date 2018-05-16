@@ -9,7 +9,7 @@ The POC is implemented as Sparkjava application that is built with Maven and pro
 
 ## Prerequisites
 
-For your environment you're going to need Java and Maven.
+For your environment you're going to need Java 1.8 and Maven 3.5.3.
 
 In addition to the environment you need an AWS account with programmatic access and suitable IAM policies attached to it.
 
