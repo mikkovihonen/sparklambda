@@ -52,7 +52,7 @@ Execute the following steps in your terminal to launch the application:
 
 ```bash
 mvn clean package
-java -jar target/sparklambda.jar -k your_aws_key_here -s your_aws_secret_here 
+java -jar target/sparklambda.jar -k your_aws_key_here -s your_aws_secret_here -r your_aws_region_here
 ```
 
 The application will launch and port will be visible on the output
